@@ -28,13 +28,13 @@ def generate_password():
 
 window = Tk()
 window.title("Password Generator")
-window.config(padx=50, pady=50)
+window.config(padx=50, pady=20)
 
 logo = PhotoImage(file="logo.png")
 
 canvas = Canvas(width=80, height=80)
 canvas.create_image(40, 40, image=logo)
-canvas.grid(column=1, row=1)
+canvas.grid(column=1, row=1, pady=25)
 
 password_label = Label(text="Password: ", font=("Courier", 15, "normal"))
 password_label.grid(column=1, row=2)
@@ -44,7 +44,7 @@ password_entry.grid(column=1, row=3)
 
 generate_button = Button(text="Generate", width=10, command=generate_password)
 generate_button.focus()
-generate_button.grid(column=1, row=4)
+generate_button.grid(column=1, row=4, pady=10)
 
 
 window.mainloop()
